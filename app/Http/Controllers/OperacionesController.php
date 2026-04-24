@@ -22,6 +22,16 @@ class OperacionesController extends Controller
 
     }
 
+    public function areaTriangulo($base,$altura){
+
+        $areaT=($base*$altura)/2;
+
+        return $areaT;
+
+
+    }
+
+
 
 
 }

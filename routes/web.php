@@ -15,18 +15,7 @@ use App\Http\Controllers\OperacionesController;
 */
 
 Route::get('/sumar/{num1}/{num2}',[OperacionesController::class,'sumar']);
+Route::get('/areatriangulo/{base}/{altura}',[OperacionesController::class,'areaTriangulo']);
 
 Route::get('/saludofuncion',[OperacionesController::class,'saludar']);
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/pepe', function () {
-    return view('saludo');
-});
-
-Route::get('/saludo3', function () {
-    return view('saludo3');
-});
