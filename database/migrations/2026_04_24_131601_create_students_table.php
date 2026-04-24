@@ -17,6 +17,16 @@ return new class extends Migration
             $table->string('ficha');
             $table->string('email');
             $table->string('sexo');
+
+            $table->unsignedBigInteger('computer_id')->nullable()->unique();
+
+            $table->foreign('computer_id')
+                ->references('id')
+                ->on('computers')
+                ->onDelete('set null')
+                ->onUpdate('set null');
+
+
             $table->timestamps();
         });
     }
