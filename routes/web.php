@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OperacionesController;
+use App\Http\Controllers\ConsultasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,9 @@ use App\Http\Controllers\OperacionesController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+Route::get('/consulta',[ConsultasController::class,'consulta']);
 
 Route::get('/sumar/{num1}/{num2}',[OperacionesController::class,'sumar']);
 Route::get('/areatriangulo/{base}/{altura}',[OperacionesController::class,'areaTriangulo']);
