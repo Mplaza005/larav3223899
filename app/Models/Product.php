@@ -16,5 +16,13 @@ class Product extends Model
         'cantidad',
         'peso',
         'tamano',
+        'user_id',
+
     ];
+
+
+    public function User(){
+        return $this->belongsTo('App\Models\User');
+    }
+
 }

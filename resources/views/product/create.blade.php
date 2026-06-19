@@ -51,7 +51,20 @@
 <br>
 
 
+ <label for="user_id">Usuario</label>
 
+    <select name="user_id" id="user_id" class="form-control">
+        <option value="">Seleccione un usuario</option>
+
+        @foreach($users as $user)
+            <option value="{{ $user->id }}">
+                {{ $user->name }}
+            </option>
+        @endforeach
+    </select>
+
+<br>
+<br><br>
 <button type="submit">Ingresar Producto:</button>
 </form>
 
